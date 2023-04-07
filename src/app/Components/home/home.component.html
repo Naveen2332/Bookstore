@@ -1,0 +1,72 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Book Store Project!</h1>
+        <p> Note : this project was created for learning purpose </p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Services</h2>
+            <p> Also I used services to do crud with my Web Api Project.
+                I made the search input box to in the Header for search and
+                go throug the page based on the Url searched
+                In this project I've used Interceptors to Inject Token for my Authendiacted Web Api</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Authentication</h2>
+            <p> You can Singup & login to view My Book data , Add Book , edit book.
+                Without SignIn these pages will never be shown that means
+                these pages are Authendiacted. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Heading</h2>
+            <p> Routing has done, I choosed the App.component for layout,
+                bootstrap also used in all of the pages, except Home paege all pages were Authendiacted
+                after Login , SignUp & SignIn pages were not available. User can Only acces these 2 pages only before
+                Login.
+            </p>
+
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <p></p>
+
+    </div>
+
+    <div class="container">
+        <h5> Error Handling </h5>
+        <p>
+            For error handling. Created a new HttpErrorHandler.ts file. in all of my components used that
+            HttpErrorHandler class & passed the error response to the handleError method to get detailed errors in
+            seperated Variable.
+            the return value were loaded on any type variable & shown in a Alert div
+
+            same div was also used to show Sucess message from the Api.
+        </p>
+        <h5> Learned </h5>
+        <p>
+            routing , Interceptors , services , gaurds , HttpErrorHandling , bootstrap , & All basic things in Angular 
+        </p>
+        <h5> Pending tasks </h5>
+        <p>
+            1 learn to fix the standard nav bar 
+            2 learn to pass Whole data of book through routing
+            
+        </p>
+
+    </div>
+
+    <hr>
+
+</div> <!-- /container -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>

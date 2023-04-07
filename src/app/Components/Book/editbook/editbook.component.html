@@ -1,0 +1,54 @@
+<div class="container mt-5 mb-5">
+
+    <div class="card col-sm-6">
+        <div class="row">
+            <div class="col card-responsive">
+                <div class=" card-header bg-grey text-dark text-center">
+                    <p class="mt-2 mb-2"><b>Edit Book</b></p>
+                    <div [hidden]="alertclass==null" [class]="alertclass">
+                        <div [hidden]="ResponseMsg!=null">
+                            <h2>{{errErr}}</h2>
+                            <h1>{{errmsg}}</h1>
+                        </div>
+                        <h2>{{ResponseMsg}}</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="card-body  row d-sm-flex col-md-6">
+                                <form [formGroup]="bookform" (ngSubmit)="submit()" method="post">
+                                    <div class="col-sm-6 mx-auto mb-1 mt-3 ">
+                                        <input type="text" name="id" [(ngModel)]="book.id" formControlName="id" readonly
+                                            placeholder="Book Id">
+                                        <span></span>
+                                        <br><br>
+
+                                        <input type="text" name="name" [(ngModel)]="book.name" formControlName="name"
+                                            placeholder="Enter Book Name">
+                                        <span></span>
+                                        <br><br>
+
+                                        <input type="text" name="authore" [(ngModel)]="book.authore"
+                                            formControlName="authore" placeholder="Authore Name">
+                                        <span></span>
+                                        <br><br>
+
+                                        <input type="number" name="price" [(ngModel)]="book.price"
+                                            formControlName="price" placeholder="Enter Book Price">
+                                        <span></span>
+                                        <br><br>
+
+                                        <div class="row ">
+                                            <button type="submit" [disabled]="bookform.invalid"
+                                                class="col btn btn-primary">Update</button>
+                                            <a href="" type="reset" type="reset" (click)="clearform()"
+                                                class="col btn btn-dark">Cancel</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

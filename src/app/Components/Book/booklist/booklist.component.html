@@ -1,0 +1,36 @@
+<div class="container mt-3 mb-3">
+    <p>booklist works!</p>
+    <a class="links">Create New Book</a>
+    <div class="card rounded col-sm-8">
+        <div class="card-head rounded d-xl-inline-flex table-responsive">
+            <table class="table rounded ">
+                <thead class=" bg-primary ">
+                    <tr class="">
+                        <th class="border text-center ">Book ID</th>
+                        <th class="border text-center ">Book Name</th>
+                        <th class="border text-center ">Authore</th>
+                        <th class="border text-center ">Price</th>
+                        <th class="border text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-dark text-white">
+                    <tr class=" " *ngFor="let b of books">
+                        <td class="border text-center">{{b.id }}</td>
+                        <td class="border text-center">{{b.name}}</td>
+                        <td class="border text-center">{{b.authore}}</td>
+                        <td class="border text-center">{{b.price}}</td>
+                        <td class="border text-center">
+                            <!-- <a type="button" routerLink="edit/{{b}}" class="btn border btn-dark mx-1">Edit</a> -->
+                            <!--Working-->
+                            <a type="button" routerLink="edit/{{b.id}}" class="btn border btn-dark mx-1">Edit</a>
+                            <!--Working-->
+                            <button type="button" (click)="confirm(b)" class="btn border btn-dark mx-1 ">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br>
+<hr>
